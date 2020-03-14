@@ -1,0 +1,7 @@
+Période middle_square :
+
+Pour x = 1111 :
+periode = 53
+
+Pour x = 1234
+periode = 56

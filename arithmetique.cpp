@@ -104,10 +104,3 @@ bool est_premier(Entier n){
     }
     return premier; 
 }
-
-int main(){
-    Entier a = 4;
-    Entier n = 13;
-    
-    cout<<est_premier(30)<<endl;
-}
