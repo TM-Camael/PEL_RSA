@@ -1,5 +1,4 @@
 #include "aleatoire.hpp"
-#include "arithmetique.hpp"
 
 Entier alea = 0;
 
@@ -84,14 +83,9 @@ Entier premier_aleatoire(){
     Entier res = 0;
     while(!premier){
         res = aleatoire();
-        cout<<res<<endl;
         if(est_premier(res)){
             premier = true;
         }
     }
     return res;
-}
-
-int main(){
-    cout<<premier_aleatoire()<<endl;
 }

@@ -18,6 +18,10 @@ Entier periode_middle_square(Entier n);
 Entier middle_square(Entier x, Entier n);
 Entier prochain_minimal_standard(Entier x);
 Entier minimal_standard(Entier x, Entier n);
+void init_alea();
+Entier aleatoire();
+Entier premier_aleatoire();
+
 
 
 #endif

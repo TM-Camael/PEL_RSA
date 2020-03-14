@@ -48,7 +48,7 @@ Entier pgcd_etendu(Entier a, Entier b, Entier *u, Entier *v){
 }
 
 // - Exercice 3
-Entier exp_rapide(Entier a, Entier n, Entier p){  
+Entier exp_rapide(Entier a, Entier p, Entier n){  
     int b = 1;     
     a = a % n; 
     while (p > 0)  
@@ -71,9 +71,15 @@ Entier inv_modulaire(Entier a, Entier n){
     Entier y;
     pgcd_etendu(a, n, &x, &y);
     if(a<n){
+        if(y<0){
+            y+=n;
+        }
         return y;
     }
     else{
+        if(x<0){
+            x+=n;
+        }
         return x;
     }
 
