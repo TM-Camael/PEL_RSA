@@ -8,3 +8,9 @@ Entier dechiffre(ClePrivee cle, Entier c){
     Entier m = exp_rapide(c, cle.getD(), cle.getN());
     return m;
 }
+
+int main(){
+    Cles test = genere_cles_aleatoire();
+    cout<<test<<endl;
+    return 0;
+}

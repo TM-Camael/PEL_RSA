@@ -29,17 +29,20 @@ Entier ClePrivee::getN() const{
 ostream& operator<<(ostream& os,const ClePublique& cp){
     Entier e = cp.getE();
     Entier n = cp.getN();
-    os<<"("<<e<<","<<n<<")"<<endl;
+    os<<"("<<e<<","<<n<<")";
+    return os;
 }
 ostream& operator<<(ostream& os,const ClePrivee& cp){
     Entier d = cp.getD();
     Entier n = cp.getN();
-    os<<"("<<d<<","<<n<<")"<<endl;
+    os<<"("<<d<<","<<n<<")";
+    return os;
 }
 
 ostream& operator<<(ostream& os, const Cles& cles){
     os<<"Cle Publique : "<<cles.cle_publique<<endl;
     os<<"Cle Privee : "<<cles.cle_privee<<endl;
+    return os;
 }
 
 Cles genere_cles(Entier p, Entier q, Entier e){
@@ -67,6 +70,6 @@ Cles genere_cles_aleatoire(){
         e = premier_aleatoire();
     }
     Entier d = inv_modulaire(e,phi_n);
-    Cles cles = {ClePublique(e,n), ClePrivee(e,n)};
+    Cles cles = {ClePublique(e,n), ClePrivee(d,n)};
     return cles;
 }
