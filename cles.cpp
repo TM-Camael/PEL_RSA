@@ -57,15 +57,14 @@ Cles genere_cles(Entier p, Entier q, Entier e){
 Cles genere_cles_aleatoire(){
     Entier p = 1;
     Entier q = 1;
-    Entier n = p*q;
-    while(n<256){
+    Entier n = 1;
+    while(n<256 || p==q){
         p = premier_aleatoire();
         q = premier_aleatoire();
         n = p*q;
     }
-    Entier phi_n = (p-1)*(q-1);
-    Entier e = phi_n;
-
+    Entier phi_n = (p-1)*(q-1);    
+    Entier e = 0;
     while(pgcd(e, phi_n)!=1){
         e = premier_aleatoire();
     }

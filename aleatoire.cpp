@@ -78,7 +78,6 @@ Entier aleatoire(){
 }
 
 Entier premier_aleatoire(){
-    init_alea();
     bool premier = false;
     Entier res = 0;
     while(!premier){

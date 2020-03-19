@@ -10,7 +10,13 @@ Entier dechiffre(ClePrivee cle, Entier c){
 }
 
 int main(){
-    Cles test = genere_cles_aleatoire();
-    cout<<test<<endl;
-    return 0;
+    init_alea();
+    Cles cles = genere_cles_aleatoire();
+    cout<<cles<<endl;
+
+    for(int i = 0; i<256; i++){
+        Entier c = chiffre(cles.cle_publique,i);
+        Entier m = dechiffre(cles.cle_privee, c);
+        cout<<i<<" "<<c<<" "<<m<<endl;
+    }
 }

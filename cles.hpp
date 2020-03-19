@@ -32,11 +32,9 @@ typedef struct {
     ClePrivee cle_privee;
 } Cles;
 
-ostream& operator<<(ostream& os, ClePrivee& cp);
-ostream& operator<<(ostream& os, ClePublique& cp);
+ostream& operator<<(ostream& os, const ClePrivee& cp);
+ostream& operator<<(ostream& os, const ClePublique& cp);
 ostream& operator<<(ostream& os, const Cles& cles);
-
-
 
 Cles genere_cles(Entier p,Entier q,Entier e);
 Cles genere_cles_aleatoire();

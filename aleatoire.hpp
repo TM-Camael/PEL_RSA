@@ -10,7 +10,6 @@
 
 using namespace std;
 
-typedef long long int Entier;
 extern Entier alea;
 
 Entier prochain_middle_square(Entier x);
