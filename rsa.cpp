@@ -8,7 +8,7 @@ Entier dechiffre(ClePrivee cle, Entier c){
     Entier m = exp_rapide(c, cle.getD(), cle.getN());
     return m;
 }
-/*
+
 int main(){
     int menu;
     do{
@@ -147,4 +147,4 @@ int main(){
     
     return 0;
 }
-*/
+
