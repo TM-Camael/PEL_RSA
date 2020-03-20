@@ -2,6 +2,7 @@
 #define HSA_HPP
 
 #include "cles.hpp"
+#include "fichier.hpp"
 
 using namespace std;
 

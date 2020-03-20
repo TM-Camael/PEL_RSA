@@ -1,7 +1,7 @@
 #include "fichier.hpp"
 
-int taille_bloc(Entier n){
-    int i=0;
+Entier taille_bloc(Entier n){
+    Entier i=0;
     while(pow(256,i) <= n){
         i++;
     }
@@ -11,7 +11,12 @@ int taille_bloc(Entier n){
 Entier code(char* buffer, int k){
     Entier result=0;
     for(int i=0; i<k;i++){
-        result += int(buffer[i])*pow(256,i);
+        Entier temp;
+        temp = buffer[i];
+        if(temp<0){
+            temp += 256;
+        }
+        result += temp*pow(256,i);
     }
     return result;
 }
@@ -20,7 +25,8 @@ void decode(Entier m, int k, char* c){
     Entier result;
     int i=0;
     for(int i=0; i<k; i++){
-        c[i] = m/256;
-        m/= 256;
+        int j = m%256;
+        c[i] = char(j);
+        m= m/256;
     }
 }
